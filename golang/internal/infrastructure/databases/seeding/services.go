@@ -37,7 +37,7 @@ func (s *ServiceSeeder) Seed(db *gorm.DB) error {
 	}
 
 	service := domain.Services{
-		ServiceName:  "Akastra System",
+		ServiceName:  "SSO System",
 		ClientId:     clientID,
 		ClientSecret: string(hashedSecret),
 		RedirectUrl:  config.Load().FrontendURL,

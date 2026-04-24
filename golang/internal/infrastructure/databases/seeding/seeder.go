@@ -17,6 +17,7 @@ func Run(db *gorm.DB) {
 		&ServiceSeeder{},
 		&RoleSeeder{},
 		&UserSeeder{},
+		&UserAccessSeeder{},
 	}
 
 	for _, seeder := range seeders {
