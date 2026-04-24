@@ -1,27 +1,5 @@
-# Next.js Setup Documentation
+# SSO Access Frontend (Next.js)
 
-Follow these steps to set up the project locally:
+This is the Next.js frontend application for the SSO Access project. It provides a user interface for managing OAuth, services, users, roles, permissions, and assigned roles.
 
-## 1. Install dependencies
-
-```bash
-npm install
-```
-
-## 2. Configure environment variables
-
-Copy the example environment file and configure your local variables:
-
-```bash
-cp .env.example .env
-```
-
-## 3. Run the development server
-
-Start the Next.js development server:
-
-```bash
-npm run dev
-```
-
-The application will be available at [http://localhost:3000](http://localhost:3000).
+For setup instructions, please refer to the main repository `readme.MD`.

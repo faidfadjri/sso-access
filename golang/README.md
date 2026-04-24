@@ -3,7 +3,6 @@
 This document outlines the available endpoints for the SSO Access API.
 
 ## Table of Contents
-- [Setup](#setup)
 - [OAuth](#oauth)
 - [Services](#services)
 - [Users](#users)
@@ -12,35 +11,6 @@ This document outlines the available endpoints for the SSO Access API.
 - [Assigned Roles](#assigned-roles)
 
 ---
-
-## Setup
-
-Follow these steps to get the project running locally:
-
-1. **Clone the repository**
-2. **Install dependencies**:
-   ```bash
-   go mod tidy
-   ```
-3. **Ensure Services are Running**: Make sure MySQL and Redis are already running on your machine.
-4. **Environment Variables**: Copy `.env.example` to `.env` and fill in the actual values.
-   ```bash
-   cp .env.example .env
-   ```
-5. **Run Migrations**:
-   ```bash
-   make migrate
-   ```
-6. **Run Database Seeding**:
-   ```bash
-   make seed
-   ```
-7. **Start the Server** (using Air for hot reloading):
-   ```bash
-   air
-   ```
-`default username: super-admin`
-`default password: very-secret`
 
 ## OAuth
 
