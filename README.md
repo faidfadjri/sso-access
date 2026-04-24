@@ -19,13 +19,7 @@ The easiest way to run the entire project (Database, Redis, Backend, and Fronten
 
 2. **Run the Project**:
    ```bash
-   docker-compose up -d
-   ```
-   *Note: On your first run, you will still need to run migrations and seed the database for the backend. After starting the containers, run the following commands on your host:*
-   ```bash
-   cd golang
-   make migrate
-   make seed
+   docker-compose up -d --build
    ```
 
 3. **Access the Applications**:
