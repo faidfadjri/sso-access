@@ -1,0 +1,270 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+}
+
+:root {
+  /* Colors */
+  --color-white: #FFFFFF;
+  --color-primary: #198FC0;
+  --color-primary-dark: #0975A1;
+  --color-secondary: #263358;
+  --color-danger: #C2464C;
+  --color-success: #11CEB8;
+  --color-warning: #E5C80B;
+  --color-smoke: #F2F6FC;
+  --color-text: #000019;
+  --color-text-secondary: rgba(0, 0, 25, 0.7);
+  --color-border: rgba(220, 220, 220, 0.6);
+  --color-border-dark: #3F4E78;
+  --color-cyan: #B2FFF6;
+  --color-pink: #FFCCCE;
+
+  /* Font Sizes */
+  --font-h1: 47.78px;
+  --font-h2: 39.81px;
+  --font-h3: 33.18px;
+  --font-h4: 27.65px;
+  --font-h5: 23.04px;
+  --font-h6: 19.2px;
+  --font-p: 16px;
+  --font-sm: 13.33px;
+  --font-xs: 11px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Utility Classes */
+
+/* Backgrounds */
+.bg-white {
+  background-color: var(--color-white);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-primary-dark {
+  background-color: var(--color-primary-dark);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.bg-danger {
+  background-color: var(--color-danger);
+}
+
+.bg-success {
+  background-color: var(--color-success);
+}
+
+.bg-warning {
+  background-color: var(--color-warning);
+}
+
+.bg-smoke {
+  background-color: var(--color-smoke);
+}
+
+.bg-text {
+  background-color: var(--color-text);
+}
+
+.bg-text-secondary {
+  background-color: var(--color-text-secondary);
+}
+
+.bg-border {
+  background-color: var(--color-border);
+}
+
+.bg-border-dark {
+  background-color: var(--color-border-dark);
+}
+
+.bg-cyan {
+  background-color: var(--color-cyan);
+}
+
+.bg-pink {
+  background-color: var(--color-pink);
+}
+
+/* Text Colors */
+.text-white {
+  color: var(--color-white);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-primary-dark {
+  color: var(--color-primary-dark);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.text-danger {
+  color: var(--color-danger);
+}
+
+.text-success {
+  color: var(--color-success);
+}
+
+.text-warning {
+  color: var(--color-warning);
+}
+
+.text-smoke {
+  color: var(--color-smoke);
+}
+
+.text-text {
+  color: var(--color-text);
+}
+
+.text-text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-border {
+  color: var(--color-border);
+}
+
+.text-border-dark {
+  color: var(--color-border-dark);
+}
+
+.text-cyan {
+  color: var(--color-cyan);
+}
+
+.text-pink {
+  color: var(--color-pink);
+}
+
+/* Borders */
+.border-white {
+  border-color: var(--color-white);
+}
+
+.border-primary {
+  border-color: var(--color-primary);
+}
+
+.border-primary-dark {
+  border-color: var(--color-primary-dark);
+}
+
+.border-secondary {
+  border-color: var(--color-secondary);
+}
+
+.border-danger {
+  border-color: var(--color-danger);
+}
+
+.border-success {
+  border-color: var(--color-success);
+}
+
+.border-warning {
+  border-color: var(--color-warning);
+}
+
+.border-smoke {
+  border-color: var(--color-smoke);
+}
+
+.border-text {
+  border-color: var(--color-text);
+}
+
+.border-text-secondary {
+  border-color: var(--color-text-secondary);
+}
+
+.border-border {
+  border-color: var(--color-border);
+}
+
+.border-border-dark {
+  border-color: var(--color-border-dark);
+}
+
+.border-cyan {
+  border-color: var(--color-cyan);
+}
+
+.border-pink {
+  border-color: var(--color-pink);
+}
+
+/* Font Sizes */
+.font-h1 {
+  font-size: var(--font-h1);
+}
+
+.font-h2 {
+  font-size: var(--font-h2);
+}
+
+.font-h3 {
+  font-size: var(--font-h3);
+}
+
+.font-h4 {
+  font-size: var(--font-h4);
+}
+
+.font-h5 {
+  font-size: var(--font-h5);
+}
+
+.font-h6 {
+  font-size: var(--font-h6);
+}
+
+.font-p {
+  font-size: var(--font-p);
+}
+
+.font-sm {
+  font-size: var(--font-sm);
+}
+
+.font-xs {
+  font-size: var(--font-xs);
+}

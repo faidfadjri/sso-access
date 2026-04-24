@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Apps",
+        "path": "/",
+        "icon": "Home",
+        "allowedRoles": [
+            "all"
+        ]
+    },
+    {
+        "title": "Account",
+        "path": "/account",
+        "icon": "User",
+        "allowedRoles": [
+            "all"
+        ]
+    },
+    {
+        "title": "Clients",
+        "path": "/clients",
+        "icon": "Settings",
+        "allowedRoles": [
+            "admin"
+        ]
+    },
+    {
+        "title": "Users",
+        "path": "/users",
+        "icon": "Users",
+        "allowedRoles": [
+            "admin"
+        ]
+    }
+]

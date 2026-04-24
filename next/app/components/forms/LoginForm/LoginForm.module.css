@@ -1,0 +1,129 @@
+.form {
+  width: 100%;
+}
+
+.inputGroup {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  font-size: 13.33px; /* var(--font-sm) approximation or use var if available in global context */
+  font-weight: 700;
+  color: #000019; /* var(--color-text) */
+  margin-bottom: 8px;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid rgba(220, 220, 220, 0.6); /* var(--color-border) */
+  border-radius: 4px;
+  font-size: 16px; /* var(--font-p) */
+  color: #000019; /* var(--color-text) */
+  transition: border-color 0.2s;
+  background-color: #ffffff; /* var(--color-white) */
+}
+
+.input:focus {
+  outline: none;
+  border-color: #198fc0; /* var(--color-primary) */
+}
+
+.input::placeholder {
+  color: #999;
+}
+
+.eyeIcon {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  color: #999;
+  background: none;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.optionsRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  font-size: 13.33px; /* var(--font-sm) */
+  color: rgba(0, 0, 25, 0.7); /* var(--color-text-secondary) */
+  cursor: pointer;
+}
+
+.checkbox {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 12px;
+  background-color: #198fc0; /* var(--color-primary) */
+  color: #ffffff; /* var(--color-white) */
+  border: none;
+  border-radius: 4px;
+  font-size: 16px; /* var(--font-p) */
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submitButton:hover {
+  background-color: #0975a1; /* var(--color-primary-dark) */
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 13.33px; /* var(--font-sm) */
+  color: #000019; /* var(--color-text) */
+}
+
+.link {
+  color: #198fc0; /* var(--color-primary) */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+.loadingWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}

@@ -1,0 +1,6 @@
+public/*
+*.txt
+*.log
+tmp/*
+*.exe
+.env
