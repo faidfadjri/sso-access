@@ -1,0 +1,71 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: sso_db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: access
+    ports:
+      - "3307:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+  redis:
+    image: redis:alpine
+    container_name: sso_redis
+    restart: unless-stopped
+    ports:
+      - "6380:6379"
+    volumes:
+      - redis_data:/data
+
+  backend:
+    build:
+      context: ./golang
+      dockerfile: Dockerfile
+    container_name: sso_backend
+    restart: unless-stopped
+    ports:
+      - "8080:8000"
+    env_file:
+      - ./golang/.env
+    environment:
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_USER=root
+      - DB_PASS=root
+      - DB_NAME=access
+      - REDIS_ADDR=redis:6379
+    depends_on:
+      - db
+      - redis
+
+  frontend:
+    build:
+      context: ./next
+      dockerfile: Dockerfile
+      args:
+        - NEXT_PUBLIC_CLIENT_ID=sso-access-client-id-12345
+        - NEXT_PUBLIC_BASE_API_URL=http://localhost:8080/api
+        - NEXT_PUBLIC_OAUTH_AUTHORIZE_URL=http://localhost:8080/oauth/authorize
+        - NEXT_PUBLIC_REDIRECT_URI=http://localhost:3000/api/auth/callback
+    container_name: sso_frontend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./next/.env
+    environment:
+      - NEXT_PUBLIC_CLIENT_ID=sso-access-client-id-12345
+      - NEXT_PUBLIC_BASE_API_URL=http://localhost:8080/api
+      - NEXT_PUBLIC_OAUTH_AUTHORIZE_URL=http://localhost:8080/oauth/authorize
+      - NEXT_PUBLIC_REDIRECT_URI=http://localhost:3000/api/auth/callback
+    depends_on:
+      - backend
+
+volumes:
+  db_data:
+  redis_data:

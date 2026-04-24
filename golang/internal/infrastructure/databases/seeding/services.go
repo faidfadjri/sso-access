@@ -21,15 +21,8 @@ func (s *ServiceSeeder) Seed(db *gorm.DB) error {
 		return nil
 	}
 
-	clientID, err := generateClientID()
-	if err != nil {
-		return err
-	}
-
-	clientSecret, err := generateClientSecret()
-	if err != nil {
-		return err
-	}
+	clientID := "sso-access-client-id-12345"
+	clientSecret := "sso-access-client-secret-12345"
 
 	hashedSecret, err := bcrypt.GenerateFromPassword([]byte(clientSecret), bcrypt.DefaultCost)
 	if err != nil {
